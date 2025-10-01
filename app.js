@@ -49,7 +49,7 @@ const localDB = process.env.LOCALDB;
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(localDB);
+    await mongoose.connect(cloudDB);
     console.log("Connected to Atlas");
   } catch (err) {
     console.log("Failed to connect with Atlas");
