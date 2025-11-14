@@ -18,6 +18,9 @@ const querySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  isAnswered: {
+    type: Boolean,
+  }
 });
 
 const Query = mongoose.model("Query", querySchema);

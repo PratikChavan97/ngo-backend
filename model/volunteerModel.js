@@ -19,29 +19,23 @@ const volunteerSchema = new mongoose.Schema({
     unique: true,
   },
 
+  city: {
+    type: String,
+    required: [true, "Address is must"],
+  },
+
   dob: {
     type: String,
     required: true,
   },
 
-  occupation: {
+  duration: {
     type: String,
-    required: true,
+    required: [true, "Duration is must"],
   },
 
-  education: {
-    type: String,
-    required: true,
-  },
-
-  isCertificate: {
+  isAnswered: {
     type: Boolean,
-    required: true,
-  },
-
-  reason: {
-    type: String,
-    required: true,
   },
 });
 

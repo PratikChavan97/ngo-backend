@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
     validate: [validator.isNumeric, "Phone number must be numbers"],
   },
-  photo: { type: String, default: "default.jpg" },
+  // photo: { type: String, default: "default.jpg" },
   password: {
     type: String,
     required: [true, "Provide a password"],

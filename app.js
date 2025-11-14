@@ -18,13 +18,13 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
+// All Routes
+
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/donation", donationRouter);
 app.use("/api/v1/volunteers", volunteerRouter);
-// app.use("/api/v1/donationRequest");
-// app.use("/api/v1/volunteerRequest");
 app.use("/api/v1/events", eventRouter);
-app.use("/api/v1/gallery", galleryRouter);
+// app.use("/api/v1/gallery", galleryRouter);
 app.use("/api/v1/query", queryRouter);
 
 const port = process.env.PORT;

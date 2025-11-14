@@ -9,19 +9,18 @@ const donationSchema = new mongoose.Schema({
     type: Number,
     required: [true, "A donor must have a phone number"],
   },
+
   email: {
     type: String,
     required: [true, "A donor must have an active email"],
     unique: true,
   },
-  itemDescription: {
-    type: String,
-  },
-  donation: {
-    type: String,
+
+  amount: {
+    type: Number,
     required: [true, "Please choose what kind of donation you are making"],
   },
-  reqStatus: String,
+  reqStatus: Boolean,
 });
 
 const Donate = mongoose.model("Donate", donationSchema);
