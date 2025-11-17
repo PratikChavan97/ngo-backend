@@ -27,8 +27,8 @@ app.use("/api/v1/events", eventRouter);
 // app.use("/api/v1/gallery", galleryRouter);
 app.use("/api/v1/query", queryRouter);
 
-const port = process.env.PORT || 4000;
-const hostURL = process.env.HOSTURL;
+const port = process.env.PORT || 8000;
+const hostURL = process.env.LOCALHOST_URL;
 
 const cloudDB = process.env.MONGODB.replace(
   "<db_password>",
