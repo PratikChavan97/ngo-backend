@@ -47,6 +47,20 @@ const connectDB = async () => {
 };
 connectDB();
 
+const url = "https://ngo-backend-njx4.onrender.com/api/v1/query";
+const interval = 300000;
+
+async function reloadWeb() {
+  try {
+    await axios.get(url);
+    console.log("Relaod Success");
+  } catch (err) {
+    if (err) console.log("Reload failed");
+  }
+}
+
+setInterval(reloadWeb, interval);
+
 app.listen(port, hostURL, () => {
   console.log(`Server is running on ${port} and ${hostURL}`);
 });
