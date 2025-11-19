@@ -13,7 +13,7 @@ donationRouter.route("/").get(getDoners).post(createDoner);
 donationRouter
   .route("/:id")
   .get(getOneDoner)
-  .put(updateDoner)
+  .patch(updateDoner)
   .delete(deleteDoner);
 
 export default donationRouter;
