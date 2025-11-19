@@ -21,16 +21,19 @@ const userSchema = new mongoose.Schema({
     unique: true,
     validate: [validator.isNumeric, "Phone number must be numbers"],
   },
+  isAdmin: {
+    type: Boolean,
+  },
   // photo: { type: String, default: "default.jpg" },
   password: {
     type: String,
-    required: [true, "Provide a password"],
+    // required: [true, "Provide a password"],
     minlength: 8,
     select: false,
   },
   passwordConfirm: {
     type: String,
-    required: [true, "Provide a password"],
+    // required: [true, "Provide a password"],
     minlength: 8,
     validate: {
       validator: function (el) {

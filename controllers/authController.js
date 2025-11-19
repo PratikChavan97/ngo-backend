@@ -16,6 +16,7 @@ const signup = async (req, res, next) => {
       password: req.body.password,
       passwordConfirm: req.body.passwordConfirm,
       phone: Number(req.body.phone),
+      isAdmin: req.body.isAdmin,
     });
 
     const token = signToken(newUser._id);
